@@ -17,6 +17,8 @@ var path = require('path');
 const customer = require('./models/customer');
 
 app.use(express.static(path.join(__dirname + '/views', '')));
+app.use(express.static(path.join(__dirname + '/utils', '')));
+
 mongoose.connect("mongodb://https://paysafe-payment-app.herokuapp.com:3000/paysafe");
 
 app.all('/*', function (req, res, next) {
