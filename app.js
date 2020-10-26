@@ -17,7 +17,7 @@ var path = require('path');
 const customer = require('./models/customer');
 
 app.use(express.static(path.join(__dirname + '/views', '')));
-mongoose.connect("mongodb://localhost/paysafe");
+mongoose.connect("mongodb://https://paysafe-payment-app.herokuapp.com/paysafe");
 
 app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
