@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+    <script src="https://hosted.test.paysafe.com/checkout/v2/paysafe.checkout.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Complete Payment</h1>
+                <form class="cf">
+                <div class="half left cf">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" id="firstname" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="email" id="email" placeholder="Email Id">
+                        </div>
+                        
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="number" id="phone" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" id="city" placeholder="City">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" id="zip" placeholder="Zip Code">
+                        </div>
+                    </div>
+                    
+                    <input type="text" id="amount" placeholder="Amount">
+                    <br>
+                    <div>
+                        <input type="submit" class="btn" id="paybutton" value="Continue">
+                    </div>
+                    
+                </div>
+                
+                
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+      
+
+</body>
+
+
+</html>
