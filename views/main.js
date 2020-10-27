@@ -1,11 +1,11 @@
-public_api_key="cHVibGljLTc3NTE6Qi1xYTItMC01ZjAzMWNiZS0wLTMwMmQwMjE1MDA4OTBlZjI2MjI5NjU2M2FjY2QxY2I0YWFiNzkwMzIzZDJmZDU3MGQzMDIxNDUxMGJjZGFjZGFhNGYwM2Y1OTQ3N2VlZjEzZjJhZjVhZDEzZTMwNDQ=";
+public_api_key="Enter your public key here";
 
 $(document).ready(function(){
     $("#paybutton").click(function(event){
         event.preventDefault();
         Pay();
     });
-  });
+});
 
   async function Pay(){
       //get data
@@ -16,7 +16,7 @@ $(document).ready(function(){
         let city=document.getElementById("city").value;
         let zip=document.getElementById("zip").value;
         let amount=document.getElementById("amount").value;
-        var token
+        let token
 
         $.ajax({
             url: "https://paysafe-payment-app.herokuapp.com/token",
@@ -72,7 +72,7 @@ $(document).ready(function(){
                 "canEditAmount": false,
                 "payout": false,
                 "payoutConfig": {
-                    "maximumAmount": 10000
+                    "maximumAmount": 1000000
                 }
             }, function(instance, error, result) {
                 if (result && result.paymentHandleToken) {
@@ -95,8 +95,7 @@ $(document).ready(function(){
                               }
                             });
                 } else {
-                  console.log("error");
-                  alert("Please keep in mind -----"+error.detailedMessage)
+                    alert(error.detailedMessage);
                 }
             }, function(stage, expired) {
                 switch(stage) {

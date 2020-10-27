@@ -11,16 +11,14 @@ getId=async (req, callbackfunc)=>{
 					email: req.email,
 					phone: req.phone,
 				}
-	//options for post request,headersand url
+	//options for post request
 	const options = {
 				  url: url,
 				  headers: constants.headers,
 				  body: JSON.stringify(values),
    				  method: 'POST'
 				};
-	//callback for requests	
 	 function callback(error, response, body) {
-		// console.log(error)
 		console.log(JSON.parse(body).id)
 		return callbackfunc(JSON.parse(body).id);
 	}			
