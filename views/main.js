@@ -53,7 +53,8 @@ $(document).ready(function(){
           }});
 
           function checkout(token,billingAddress,customer,amount,uuid) {
-            paysafe.checkout.setup("cHVibGljLTc3NTE6Qi1xYTItMC01ZjAzMWNiZS0wLTMwMmQwMjE1MDA4OTBlZjI2MjI5NjU2M2FjY2QxY2I0YWFiNzkwMzIzZDJmZDU3MGQzMDIxNDUxMGJjZGFjZGFhNGYwM2Y1OTQ3N2VlZjEzZjJhZjVhZDEzZTMwNDQ=", {
+              public_api_key=process.env.public_key;
+            paysafe.checkout.setup(public_api_key, {
                 "currency": "USD",
                 "amount": parseInt(amount)*100,
                 "singleUseCustomerToken": token,
