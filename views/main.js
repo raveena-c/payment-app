@@ -17,7 +17,7 @@ $(document).ready(function(){
         var token
 
         $.ajax({
-            url: "https://paysafe-payment-app.herokuapp.com:3000/token",
+            url: "http://localhost:3000/token",
             type: "POST",
             contentType: "application/json",
             data: JSON.stringify({'email': email,'phone':phone,'firstName':firstName})    
@@ -76,7 +76,7 @@ $(document).ready(function(){
                 if (result && result.paymentHandleToken) {
                     $.ajax({
                               type: "POST",
-                              url: "https://paysafe-payment-app.herokuapp.com:3000/payment",
+                              url: "http://localhost:3000/payment",
                               contentType: "application/json",
                               data: JSON.stringify({'token': result.paymentHandleToken,'amount':result.amount},),
                               success: (data) =>{   

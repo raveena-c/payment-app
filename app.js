@@ -15,12 +15,13 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 var path = require('path');
 const customer = require('./models/customer');
-
+const envfile = require('dotenv').config();
 app.use(express.static(path.join(__dirname + '/views', '')));
 app.use(express.static(path.join(__dirname + '/utils', '')));
 
-mongoose.connect("mongodb://https://paysafe-payment-app.herokuapp.com:3000/paysafe");
-
+const dbUrl = process.env.DB_URL;
+mongoose.connect(dbUrl);
+console.log("connected to database");
 app.all('/*', function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
