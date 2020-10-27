@@ -48,9 +48,9 @@ form {
     
   }
   
-  textarea {
-      height: 126px;
-  }
+  input:focus {
+   background-color:darkgrey;
+ }
 }
 
 

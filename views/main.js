@@ -1,4 +1,4 @@
-import { public_key } from "../constants";
+public_api_key="cHVibGljLTc3NTE6Qi1xYTItMC01ZjAzMWNiZS0wLTMwMmQwMjE1MDA4OTBlZjI2MjI5NjU2M2FjY2QxY2I0YWFiNzkwMzIzZDJmZDU3MGQzMDIxNDUxMGJjZGFjZGFhNGYwM2Y1OTQ3N2VlZjEzZjJhZjVhZDEzZTMwNDQ=";
 
 $(document).ready(function(){
     $("#paybutton").click(function(event){
@@ -55,7 +55,6 @@ $(document).ready(function(){
           }});
 
           function checkout(token,billingAddress,customer,amount,uuid) {
-            public_api_key=public_key;
             paysafe.checkout.setup(public_api_key, {
                 "currency": "USD",
                 "amount": parseInt(amount)*100,
