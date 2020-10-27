@@ -15,10 +15,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 var path = require('path');
 const customer = require('./models/customer');
-//const envfile = require('dotenv').config();
 app.use(express.static(path.join(__dirname + '/views', '')));
 app.use(express.static(path.join(__dirname + '/utils', '')));
-
+if(process.env.NODE_ENV !== "production"){
+	require('dotenv').config();
+}
 const dbUrl = process.env.DB_URL;
 mongoose.connect(dbUrl);
 console.log("connected to database");
