@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 var path = require('path');
 const customer = require('./models/customer');
-const envfile = require('dotenv').config();
+//const envfile = require('dotenv').config();
 app.use(express.static(path.join(__dirname + '/views', '')));
 app.use(express.static(path.join(__dirname + '/utils', '')));
 
