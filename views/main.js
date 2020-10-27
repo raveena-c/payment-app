@@ -1,4 +1,4 @@
-var constants = require("../constants");
+import { public_key } from "../constants";
 
 $(document).ready(function(){
     $("#paybutton").click(function(event){
@@ -55,7 +55,7 @@ $(document).ready(function(){
           }});
 
           function checkout(token,billingAddress,customer,amount,uuid) {
-            public_api_key=constants.public_key;
+            public_api_key=public_key;
             paysafe.checkout.setup(public_api_key, {
                 "currency": "USD",
                 "amount": parseInt(amount)*100,
