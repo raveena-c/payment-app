@@ -48,10 +48,7 @@ form {
     
   }
   
-  .input:focus {
-   outline: none !important;
-   border:1px solid darkslategray;
-   box-shadow: 0 0 10px #719ECE;
+  
 }
 
 
